@@ -17,12 +17,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${geistSans.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col pt-16 relative">
-        {/* Global Grid Background */}
-        <div className="fixed inset-0 -z-50 pointer-events-none bg-grid opacity-70"></div>
-        
+      <body className="min-h-full flex flex-col">
         <Header />
-        <main className="flex-1 w-full relative z-0">{children}</main>
+        <main className="flex-1 w-full mx-auto max-w-6xl px-6">{children}</main>
         <Footer />
       </body>
     </html>
